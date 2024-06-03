@@ -1,0 +1,94 @@
+/* PriceComparisonForm.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.fullscreen-background {
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-image:  url('bill.jpg');
+}
+
+
+.formContainer {
+  width: 80%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.9); /* Make the container slightly more opaque */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-image:  url('bill.jpg');
+
+}
+
+/* ... rest of the CSS remains the same ... */
+
+.autocomplete-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+
+
+}
+
+.dark-textfield .MuiInputBase-input {
+  color: black; /* Text color */
+  background-color: lightgray; /* Background color */
+}
+
+.dark-textfield .MuiInputLabel-root {
+  color: black; /* Label color */
+}
+
+.MuiButton-root {
+  margin-top: 20px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px; /* Add padding to the card content */
+  text-align: center;
+
+}
+
+.card-content .MuiTypography-root {
+  word-wrap: break-word; /* Ensure long text breaks to fit within the card */
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto; /* Center align when there is only one card */
+}
+
+.price-comparison-heading {
+  font-weight: bold;
+}
