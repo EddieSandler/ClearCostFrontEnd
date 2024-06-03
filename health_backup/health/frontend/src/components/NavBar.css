@@ -1,0 +1,48 @@
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  z-index: 1000;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 20px;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+.toggleButton:hover {
+  color: darkblue;
+}
+
+.App {
+  padding-top: 60px; /* Adjust based on the height of the navbar */
+}
