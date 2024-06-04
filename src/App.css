@@ -1,0 +1,45 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.card {
+  padding: 2em;
+  align-content: center;
+}
+
+/* App.css */
+.login-container {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.login {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.toggleButton {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.toggleButton:hover {
+  color: darkblue;
+}
