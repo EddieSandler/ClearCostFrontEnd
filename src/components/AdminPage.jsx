@@ -13,7 +13,7 @@ const AdminPage = () => {
 
   const handleAddProcedure = async () => {
     try {
-      const response = await axios.post('http://localhost:8080/add-procedure', {
+      const response = await axios.post('https://backend-service-4snlfkepaq-uc.a.run.app/add-procedure', {
         cpt_code: cptCode,
         procedure_name: procedureName,
         facility_name: facilityName,
@@ -27,7 +27,7 @@ const AdminPage = () => {
 
   const handleUpdateProcedure = async () => {
     try {
-      const response = await axios.put(`http://localhost:8080/update-procedure/${procedureId}`, {
+      const response = await axios.put(`https://backend-service-4snlfkepaq-uc.a.run.app/update-procedure/${procedureId}`, {
         cpt_code: cptCode,
         procedure_name: procedureName
       });
@@ -39,7 +39,7 @@ const AdminPage = () => {
 
   const handleUpdateFacility = async () => {
     try {
-      const response = await axios.put(`http://localhost:8080/update-facility/${facilityId}`, {
+      const response = await axios.put(`https://backend-service-4snlfkepaq-uc.a.run.app/update-facility/${facilityId}`, {
         facility_name: facilityName
       });
       console.log(response.data);
@@ -50,7 +50,7 @@ const AdminPage = () => {
 
   const handleUpdatePrice = async () => {
     try {
-      const response = await axios.put(`http://localhost:8080/update-price/${pricingId}`, {
+      const response = await axios.put(`https://backend-service-4snlfkepaq-uc.a.run.app/update-price/${pricingId}`, {
         procedure_id: procedureId,
         facility_id: facilityId,
         price: price
@@ -63,7 +63,7 @@ const AdminPage = () => {
 
   const handleDeleteProcedure = async () => {
     try {
-      const response = await axios.delete(`http://localhost:8080/delete-procedure/${procedureId}`);
+      const response = await axios.delete(`https://backend-service-4snlfkepaq-uc.a.run.app/delete-procedure/${procedureId}`);
       console.log(response.data);
     } catch (error) {
       console.error('Error deleting procedure:', error);

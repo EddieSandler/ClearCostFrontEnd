@@ -43,7 +43,7 @@ const RegistrationForm = ({ handleLogin }) => {
     }
 
     try {
-      const response = await axios.post("http://localhost:8080/register", {
+      const response = await axios.post("https://backend-service-4snlfkepaq-uc.a.run.app/register", {
         username,
         password,
         insuranceCompany,
@@ -53,7 +53,7 @@ const RegistrationForm = ({ handleLogin }) => {
         isAdmin,
       });
       if (response.status === 200) {
-        const loginResponse = await axios.post("http://localhost:8080/login", {
+        const loginResponse = await axios.post("https://backend-service-4snlfkepaq-uc.a.run.app/login", {
           username,
           password,
         });

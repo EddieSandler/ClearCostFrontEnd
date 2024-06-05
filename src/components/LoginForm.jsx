@@ -17,7 +17,7 @@ const LoginForm = ({ handleLogin }) => {
 
     // makes request to the backend to log in - stores JWT in session storage
     try {
-      const response = await axios.post('http://localhost:8080/login', { username, password });
+      const response = await axios.post('https://backend-service-4snlfkepaq-uc.a.run.app/login', { username, password });
       if (response.status === 200) {
         const token = response.data.token;
         sessionStorage.setItem('token', token);
