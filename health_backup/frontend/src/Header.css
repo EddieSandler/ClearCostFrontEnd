@@ -1,0 +1,7 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 50px; /* Adjust based on your design */
+  width: 100%; /* This will stretch the header across the screen */
+}
