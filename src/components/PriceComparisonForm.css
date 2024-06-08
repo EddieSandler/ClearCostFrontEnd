@@ -21,7 +21,7 @@ body, html {
   background-color: #f4f4f4;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
-  background-image:  url('./bill.jpg');
+  background-image:  url('../bill.jpg');
 }
 
 
