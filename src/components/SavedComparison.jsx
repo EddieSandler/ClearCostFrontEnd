@@ -30,7 +30,7 @@ const SavedComparisons = () => {
 
       try {
         const response = await axios.get(
-          "https://backend-service-4snlfkepaq-uc.a.run.app/get-comparisons",
+          "https://backend-service-4snlfkepaq-uc.a.run.app/api/get-comparisons",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ const SavedComparisons = () => {
 
     try {
       const response = await axios.delete(
-        "https://backend-service-4snlfkepaq-uc.a.run.app/delete-all-comparisons",
+        "https://backend-service-4snlfkepaq-uc.a.run.app/api/delete-all-comparisons",
         {
           headers: {
             Authorization: `Bearer ${token}`,
