@@ -1,5 +1,5 @@
-# Use the official Node.js image.
-FROM node:18
+# Stage 1: Build the React app
+FROM node:18 AS builder
 
 # Set the working directory inside the container.
 WORKDIR /app
@@ -10,17 +10,26 @@ COPY package*.json ./
 # Install dependencies.
 RUN npm install
 
+# Ensure that vite has execution permissions
+RUN chmod +x node_modules/.bin/vite
+
+# Add node_modules/.bin to the PATH
+ENV PATH=/app/node_modules/.bin:$PATH
+
 # Copy the rest of your application code.
 COPY . .
 
 # Build the React app.
 RUN npm run build
 
-# Install serve to serve the build directory.
-RUN npm install -g serve
+# Stage 2: Serve the app with a lightweight server
+FROM nginx:alpine
 
-# Expose the port serve runs on.
-EXPOSE 8080
+# Copy the build output from the previous stage
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Define the command to run your app.
-CMD ["serve", "-s", "dist"]
+# Expose the port nginx runs on
+EXPOSE 80
+
+# Define the command to run nginx
+CMD ["nginx", "-g", "daemon off;"]
